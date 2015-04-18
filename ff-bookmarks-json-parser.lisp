@@ -15,12 +15,6 @@
        :reader ff-bookmark-record-id)
    (annos :initarg :annos
           :reader ff-bookmark-record-annos)
-   (flags :initarg :flags
-          :reader ff-bookmark-record-flags)
-   (expires :initarg :expires
-            :reader ff-bookmark-record-expires)
-   (value :initarg :value
-          :reader ff-bookmark-record-value)
    (type :initarg :type
          :reader ff-bookmark-record-type)
    (root :initarg :root
@@ -51,6 +45,7 @@
                         :date-added (cdr (assoc :date-added record-alist))
                         :last-modified (cdr (assoc :last-modified record-alist))
                         :id (cdr (assoc :id record-alist))
+                        :annos (cdr (assoc :annos record-alist))
                         :type (cdr (assoc :type record-alist))
                         :root (cdr (assoc :root record-alist))
                         )))
